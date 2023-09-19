@@ -11,7 +11,7 @@
 			<div class="first_palm">
 				<img class="palmier_bot" src="./A7/palmier_bas.png" alt="palmier_bot">
 			</div>
-			<div class="cv_recto">
+			<div class="cv_recto" id="cv_recto">
 				<p class="name_sup"> Manon <br> Demazure</p>
 				<p class="name_inf1"> Manon</p>
 				<p class="name_inf2"> Demazure</p>
@@ -28,7 +28,7 @@
 					carrière professionnelle. Je suis prête à mettre en pratique mes compétences techniques et
 					ma créativité pour contribuer au succès de votre entreprise.</p>
 			</div>
-			<div class="cv_verso">
+			<div class="cv_verso" id="cv_verso">
 				<div class="presentation">
 					<div class="script">
 						<div class="pink_circle"></div> 
@@ -122,5 +122,14 @@
 				<img class="palmier_top" src="./A7/palmier_haut.png" alt="palmier">
 			</div>
 		</div>
+	<!-- <script>
+			const cv_recto = document.getElementById('cv_recto');
+			const cv_verso = document.getElementById('cv_verso');
+
+			cv_recto.addEventListener('click', () => {
+				cv_recto.style.transform = 'rotateY(180deg)'
+				cv_verso.style.transform = 'rotateY(0deg)' 
+				[cv_recto, cv_verso] = [cv_verso, cv_recto]});
+		</script> -->
     </body>
 </html>
