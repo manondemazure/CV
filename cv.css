@@ -2,29 +2,108 @@ body {
 	margin:auto;
 	width: 1000px;
 	font-family: Arial, sans-serif;
+	background-color: antiquewhite;
+	justify-content: space-evenly;
 }
 
 .containers_cv {
-	text-align: center;
-	width: 1000px;
-	height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.cv_recto, .cv_verso {
+	border: 2px solid black;
+	flex: 1;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 10px;
+	z-index: 0;
 }
 
 .cv_recto {
-	background-color: pink;
-	width: 45%;
-	height: 60%;
-	display: inline-block;
-	vertical-align: top;
-	margin: 10px;
+	background-color: white;
+	height: 650px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cv_verso {
-	width: 45%;
-	display:inline-block;
-	vertical-align: top;
-	margin: 10px;
-	border: 2px solid black;
+	background-color: white;
+
+}
+
+.re_me {
+	width:200px;
+	border-radius: 50%;
+	position: absolute; 
+	z-index: 2;
+	bottom: 36%;
+}
+
+.rectangle {
+	width: 100%;
+    height: 150px; 
+    background-color: rgb(255, 214, 221);
+	z-index: 1;
+	text-align: center;
+	position: relative;
+}
+
+.contact_div {
+	position: absolute;
+    top: 0;
+    right: 30px;
+}
+
+.contact {
+	font-family: "Impact", fantasy;
+}
+
+.fa {
+	font-size: 12px;
+	margin-right: 10px;
+}
+
+.p_contact {
+	font-size: 15px;
+	margin-bottom: -5px;
+}
+
+
+.name_sup {
+	align-self: flex-start;
+	position: absolute;
+	font-family: "Apple Chancery", cursive;
+	font-size: 70px;
+	margin: 0;
+	z-index:2;
+}
+
+.name_inf1 , .name_inf2{
+	align-self: flex-start;
+	position: absolute;
+	font-size: 100px;
+	margin: 0px;
+	z-index: 1;
+	color: rgb(255, 230, 233);
+	font-family: "Snell Roundhand", cursive;
+}
+
+.name_inf2 {
+	top: 145px;
+}
+
+.resum {
+	position: absolute;
+	align-self: flex-end;
+	text-align: center;
+	width: 400px;
+	bottom: 100px;
 }
 
 .picture {
@@ -35,7 +114,7 @@ body {
 .script {
 	float:right;
 	width: 60%;
-	font-size: 8px;
+	font-size: 10px;
 
 }
 
@@ -46,21 +125,21 @@ body {
     background-color: pink; 
 	border-bottom-right-radius: 80% 100%;
 	opacity: 0.4;
-	
+	top:30px;
 }
 
-img {
+.me {
 	clip-path: circle(50%);
 	position:relative;
 	 width:100px;
 	 height:100px;
-	 margin:30px;
+	 margin:45px;
 	 position: absolute;
 }
 
 .formation {
 	margin-bottom: 15px;
-	font-size: 10px;
+	font-size: 11px;
 }
 
 .myname {
@@ -76,17 +155,10 @@ img {
 	position:relative;
 }
 
-.search {
-	width:80%;
-	shape-outside: circle(50%);
-	float: right;
-
-}
-
 .exp {
 	width:60%;
 	float:right;
-	font-size: 8px;
+	font-size: 10px;
 }
 
 .formation_part 
@@ -100,7 +172,7 @@ img {
 }
 
 .date {
-	font-size: 8px;
+	font-size: 7px;
 }
 
 .school {
@@ -143,8 +215,8 @@ img {
 .info_perso {
 	width: 40%;
 	float:left;
-	margin-top: 50px;
-	font-size:8px;
+	margin-top: 80px;
+	font-size:10px;
 	
 }
 
@@ -154,62 +226,34 @@ img {
 
 .fa-solid {
 	font-size: 10px;
+	margin-right: 5px;
+}
+
+.palmier_bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1;
+
+}
+
+.palmier_top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    z-index: 1;
 }
 
 
-@media (width: 390px) and (height: 844px) { 
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-	body {
-		margin:auto;
-		width: 390px;
-	}
-
-	img {
-		 width:90px;
-		 height:90px;
-		 position: absolute;
-	}
-
-	.pink_circle {
-		width: 200px;
-		height: 175px; 
-	
-	}
-
-	.script {
-		width: 60;
-	}
-	
-	.myname , .myjob {
-		position: relative;
-		font-size: 14px;
-		left: 50px;
-	}
-	
-	.myjob {
-		margin-top: -10px;
-		
-	}
-	.search {
-		font-size: 10px;
-		width: 75%;
-		shape-outside: circle(50%);
-	}
-
-	.exp , .info_perso {
-		font-size: 10px;
-	}
-
-	.school , .job {
-		margin-bottom: -10px;
-	}
-
-	.formation {
-		margin-bottom: 15px;
-	}
-
-	.pink_bar2 {
-		width: 75%;
-	}
-
+    .centered-div {
+        width: 100%;
+    }
 }
