@@ -53,7 +53,7 @@ body {
 	display:flex;
 	justify-content: space-around;
 	align-self: center;
-	margin-top: -10%;
+	margin-top: -85%;
 	margin-bottom: -10px;
 }
 
@@ -81,20 +81,19 @@ body {
 
 .name_inf1 , .name_inf2{
 	font-size: 100px;
-	position: absolute;
+	position: relative;
 	margin:0;
 	z-index:1;
 	color: rgb(255, 230, 233);
 	font-family: "Snell Roundhand", cursive;
 	
 }
-
 .name_inf1 {
-	top: 7px;
+	top: -45%;
 }
 
 .name_inf2 {
-	top:120px;
+	top: -57%;
 }
 
 .resum {
@@ -124,17 +123,17 @@ body {
     transform: translate(-50%, -50%);
 }
 .myname {
-	font-size: 15px;
+	font-size: 18px;
 	position: absolute;
-	top: 20px;
-	left: 65%;
+	top: 10px;
+	left: 55%;
 }
 
 .myjob {
-	font-size: 12px;
+	font-size: 15px;
 	position: absolute;
-	top: 40px;
-	left: 60%;
+	top: 30px;
+	left: 55%;
 }
 
 .pink_circle {
@@ -170,7 +169,7 @@ body {
 	grid-column: 2 / 3;
 	grid-row:  2 / 3;
 	position:relative;
-	top: -10%;
+	top: -13%;
 }
 
 .date {
@@ -227,46 +226,121 @@ body {
 @media screen and (max-width: 768px) {
     .cv_recto , .cv_verso {
 		position: absolute;
-		width: 400px;
-		height: 566px;
+		width: 500px;
+		height: 666px;
 		left: 15%;
+		transition: transform 0.3s, z-index 0.3;
 	}
 
 	.cv_recto {
 		z-index: 1;
 		left: 5%;
+		transform: translateX(0);
+
 	}
 	.cv_verso {
 		z-index:0;
 		transform: rotate(5deg);
 	}
 
-	.containers_cv {
-		width: 100%;
+	.cv_verso:not(.active):hover {
+		background-color: rgb(255, 239, 241);
 		cursor: pointer;
 	}
+	.cv_containers.hover .cv_recto:not(.active) {
+		transform: rotate(-5deg);
+		background-color: rgb(255, 239, 241);
+		cursor: pointer;
+	}
+
+	.cv_recto.active, .cv_verso.active {
+        z-index: 2; 
+		transform: translateX(0);
+    }
+
+	.containers_cv {
+		width: 100%;
+	}
 	.palmier_top, .palmier_bot {
-		z-index:2;
+		z-index:3;
 		position:relative;
 		width: 150px;
 	}
-	.exp , .info_perso {
-		font-size : 9px;
-	}
-
-	.exp {
-		top:-14%;
-	}
-
 	.myname, .myjob {
 		left: 55%;
 	}
-	.myname {
-		top: 2%;
+
+
+
+}
+
+@media screen and (max-width: 390px) {
+	.cv_recto, .cv_verso {
+		width: 300px;
+		height: 566px;
 	}
+
+	.p_contact {
+		font-size: 12px;
+	}
+
+	.fa {
+		font-size: 10px;
+	}
+
+	.re_me {
+		width:130px;
+		height: 130px;
+	}
+	.rectangle {
+		height: 130px; 
+	}
+
+	.resum {
+		width: 300px;
+		font-size: 15px;
+		margin-top: 15%;
+	}
+
+	.name_sup {
+		font-size: 60px;
+	}
+	.name_inf1, .name_inf2 {
+		font-size: 75px;
+	}
+	.name_inf1 {
+		top: -40%;
+	}
+
+	.name_inf2 {
+		top: -45%;
+	}
+
+	.exp, .info_perso {
+		font-size: 8px;
+	}
+
+	.exp {
+		top: -10%;
+	}
+
+	.pink_circle {
+		width: 175px;
+		height:150px; 
+	}
+
 	.myjob {
-		top: 20%;
+		left: 50%;
+		top: 40px;
+		font-size: 12px;
+	}
+	.myname {
+		top: 20px;
+		font-size: 15px;
+		left : 50%;
 	}
 
-
+	.title_part {
+		font-size: 10px;
+	}
 }
