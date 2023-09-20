@@ -23,6 +23,7 @@ body {
 	z-index: 0;
 	height: 666px;
 	width: 500px;
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .cv_recto {
@@ -230,27 +231,26 @@ body {
 		height: 666px;
 		left: 15%;
 		transition: transform 0.3s, z-index 0.3;
+		
 	}
 
 	.cv_recto {
 		z-index: 1;
 		left: 5%;
-		transform: translateX(0);
-
 	}
+
 	.cv_verso {
 		z-index:0;
 		transform: rotate(5deg);
 	}
-
-	.cv_verso:not(.active):hover {
+	
+	.cv_verso:not(.active):hover, .cv_recto:not(.active):hover {
 		background-color: rgb(255, 239, 241);
 		cursor: pointer;
 	}
-	.cv_containers.hover .cv_recto:not(.active) {
+
+	.cv_recto:not(.active) {
 		transform: rotate(-5deg);
-		background-color: rgb(255, 239, 241);
-		cursor: pointer;
 	}
 
 	.cv_recto.active, .cv_verso.active {
