@@ -347,7 +347,7 @@ body {
 	}
 
 	.name_inf2 {
-		top: -45%;
+		top: -44.5%;
 	}
 
 	.exp, .info_perso {
@@ -376,5 +376,9 @@ body {
 
 	.title_part {
 		font-size: 10px;
+	}
+
+	.palmier_top, .palmier_bot { 
+		width: 90px;
 	}
 }
