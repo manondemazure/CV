@@ -13,6 +13,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	height: 100vh;
+	width: 100%;
 }
 
 .cv_recto, .cv_verso {
@@ -23,6 +24,7 @@ body {
 	z-index: 0;
 	height: 666px;
 	width: 500px;
+	position: absolute;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -32,6 +34,7 @@ body {
     justify-content: space-between;
     align-items: center;
 	flex-direction: column;
+	right: 50%;
 }
 
 .cv_verso {
@@ -39,6 +42,7 @@ body {
 	display: grid;
 	grid-template-rows: 20% 80%; 
 	grid-template-columns: auto auto;
+	left: 50%;
 }
 
 .re_me {
@@ -213,6 +217,8 @@ body {
 .palmier_bot {
 	width:200px;
 	margin:0;
+	z-index: 1;
+	position: relative;
 }
 
 .second_palm {
@@ -221,10 +227,12 @@ body {
 }
 .palmier_top {
 	width:200px;
+	z-index: 1;
+	position: relative;
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 935px) {
    
 	.containers_cv {
 		flex-direction: column;
@@ -237,6 +245,7 @@ body {
 		height: 646px;
 		transform: translate(-50%, -50%);
 		transition: transform 0.3s, z-index 0.3;
+		top: 15%;
 	}
 
 	.cv_recto {
