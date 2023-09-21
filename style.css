@@ -208,7 +208,6 @@ body {
 	margin-bottom: -10px;
 }
 
-
 .fa-solid {
 	font-size: 10px;
 	margin-right: 5px;
@@ -218,20 +217,18 @@ body {
 	justify-content: flex-start;
 	align-self: flex-end;
 	flex:1;
-	margin: 0;
 }
 
 .palmier_bot, .palmier_top {
 	width:200px;
 	margin:0;
 	z-index: 1;
-
 }
+
 .second_palm {
 	justify-content: flex-end;
 	align-self: flex-start;
 	flex:1;
-	margin: 0;
 }
 
 
@@ -240,7 +237,6 @@ body {
 
 	.div_middle {
 		flex-wrap: wrap;
-		
 	}
 
 	.cv_recto , .cv_verso {
