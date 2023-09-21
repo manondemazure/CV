@@ -1,19 +1,23 @@
 body {
 	font-family: Arial, sans-serif;
 	background-color: antiquewhite;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
 }
 
 .containers_cv {
 	display:flex;
-	flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
 	height: 100vh;
 	width: 100%;
+}
+
+.div_middle {
+	align-self: center;
+	width:100%;
+	height: 700px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex:2;
 }
 
 .cv_recto, .cv_verso {
@@ -24,7 +28,7 @@ body {
 	z-index: 0;
 	height: 666px;
 	width: 500px;
-	position: absolute;
+	align-self: center;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -212,51 +216,48 @@ body {
 .first_palm {
 	justify-content: flex-start;
 	align-self: flex-end;
+	flex:1;
+	margin: 0;
 }
 
-.palmier_bot {
+.palmier_bot, .palmier_top {
 	width:200px;
 	margin:0;
 	z-index: 1;
 	position: relative;
-}
 
+}
 .second_palm {
 	justify-content: flex-end;
 	align-self: flex-start;
-}
-.palmier_top {
-	width:200px;
-	z-index: 1;
-	position: relative;
+	flex:1;
+	margin: 0;
 }
 
 
-@media screen and (max-width: 935px) {
+@media screen and (max-width: 1000px) {
    
-	.containers_cv {
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: flex-start;
+
+	.div_middle {
+		flex-wrap: wrap;
 	}
+
 	.cv_recto , .cv_verso {
-		position: absolute;
 		width: 480px;
 		height: 646px;
-		transform: translate(-50%, -50%);
 		transition: transform 0.3s, z-index 0.3;
-		top: 15%;
 	}
 
 	.cv_recto {
 		z-index: 1;
-		left: 5%;
 	}
 
 	.cv_verso {
 		z-index:0;
-		left: 10%;
 		transform: rotate(8deg);
+		position:relative;
+		top: -95%;
+		left: 10%;
 	}
 	
 	.cv_verso:not(.active):hover, .cv_recto:not(.active):hover {
@@ -273,17 +274,10 @@ body {
 		transform: translateX(0);
     }
 
-	.containers_cv {
-		width: 100%;
-	}
-
-	.first_palm, .second_palm {
-		display: block;
-	}
 
 	.palmier_top, .palmier_bot {
 		z-index:3;
-		position:absolute;
+		position: absolute;
 		width: 130px;
 	}
 
@@ -307,6 +301,10 @@ body {
 	.cv_recto, .cv_verso {
 		width: 300px;
 		height: 566px;
+	}
+
+	.cv_verso {
+		top: -85%;
 	}
 
 	.p_contact {
