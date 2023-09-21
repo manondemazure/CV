@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+
 body {
 	font-family: Arial, sans-serif;
 	background-color: antiquewhite;
@@ -81,24 +85,23 @@ body {
 }
 
 .name_sup {
-	
-	font-family: "Apple Chancery", cursive;
-	font-size: 70px;
+	font-family: 'Croissant One', cursive;
+	font-size: 65px;
 	margin:0;
 	z-index:2;
 }
 
 .name_inf1 , .name_inf2{
-	font-size: 100px;
+	font-size: 65px;
 	position: relative;
 	margin:0;
 	z-index:1;
 	color: rgb(255, 230, 233);
-	font-family: "Snell Roundhand", cursive;
-	
+	font-family: 'Croissant One', cursive;
+	font-style: italic;
 }
 .name_inf1 {
-	top: -45%;
+	top: -42.5%;
 }
 
 .name_inf2 {
@@ -234,7 +237,6 @@ body {
 
 @media screen and (max-width: 1000px) {
    
-
 	.div_middle {
 		flex-wrap: wrap;
 	}
@@ -296,6 +298,10 @@ body {
 		margin-top: -5px;
 	}
 
+	.name_inf2 {
+		top: -55%;
+	}
+
 }
 
 @media screen and (max-width: 450px) {
@@ -331,13 +337,13 @@ body {
 	}
 
 	.name_sup {
-		font-size: 60px;
+		font-size: 50px;
 	}
 	.name_inf1, .name_inf2 {
-		font-size: 75px;
+		font-size: 50px;
 	}
 	.name_inf1 {
-		top: -40%;
+		top: -35%;
 	}
 
 	.name_inf2 {
