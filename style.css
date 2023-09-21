@@ -200,6 +200,7 @@ body {
 
 .place, .place_school, .work_place, .work {
 	display: inline-block;
+	
 }
 
 .job {
@@ -277,7 +278,7 @@ body {
 
 	.palmier_top, .palmier_bot {
 		z-index:3;
-		position: absolute;
+		position: fixed;
 		width: 130px;
 	}
 
@@ -293,6 +294,10 @@ body {
 
 	.myname, .myjob {
 		left: 55%;
+	}
+
+	.date { 
+		margin-top: -5px;
 	}
 
 }
